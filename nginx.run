@@ -1,0 +1,5 @@
+#!/bin/bash
+set -e
+
+exec 2>&1
+exec /sbin/setuser $APP_USER /usr/sbin/nginx -c /etc/nginx/nginx.conf -g " daemon off;"
